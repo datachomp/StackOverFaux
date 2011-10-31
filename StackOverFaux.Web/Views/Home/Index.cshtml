@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    
+
+}
+
+<script type="text/javascript">
+    $(function () {
+        $("#tabs").tabs();
+    });
+</script>
+
+
+
+<h2>@ViewBag.Message</h2>
+
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Recent</a></li>
+		<li><a href="#tabs-2">Hot</a></li>
+	</ul>
+	<div id="tabs-1">
+		<p>This is the most recent stuff!</p>
+
+        @foreach (var recent in ViewBag.RecentPosts)
+        {
+           <p>Vote: Answers: @recent.AnswerCount Views: @recent.ViewCount Title: @recent.Title
+            <br />@recent.Tags  - <b>@recent.DisplayName</b> - @recent.Reputation</p>
+        }
+
+	</div>
+	<div id="tabs-2">
+		<p>The hottest stuff in the DB!</p>
+        @foreach (var recent in ViewBag.HotPosts)
+        {
+           <p>Vote: Answers: @recent.AnswerCount Views: @recent.ViewCount Title: @recent.Title
+            <br />@recent.Tags  - <b>@recent.DisplayName</b> - @recent.Reputation</p>
+        }
+	</div>
+</div>

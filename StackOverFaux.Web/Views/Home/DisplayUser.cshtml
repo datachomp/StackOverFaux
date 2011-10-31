@@ -1,0 +1,35 @@
+﻿@model StackOverFaux.Web.Models.UserDisplayViewModel
+@{
+    ViewBag.Title = "User";
+}
+
+<h2>User</h2>
+
+<p> <b>@Model.User.DisplayName</b> Joined: <b>@Model.User.CreationDate.ToShortDateString()</b>
+LastLogin: <b>@Model.User.LastAccessDate.ToShortDateString()</b> Rep: <b>@Model.User.Reputation</b>
+</p>
+<hr />
+
+<h2>Questions:</h2>
+@foreach(var question in Model.Questions)
+{
+    <p>Votes:  @question.AnswerCount @question.ViewCount; @question.Title @question.Tags</p>
+
+}
+<hr />
+<h2>Answers:</h2>
+@foreach (var answer in Model.Answers)
+{
+    <p> @answer.ViewCount @answer.Title</p>
+}
+
+<hr />
+Tags:
+Count, TagName
+<hr />
+<h2>Badges:</h2>
+@foreach(var badges in Model.Badges)
+{
+  <p>@badges.Name	Count</p>
+}
+<hr />

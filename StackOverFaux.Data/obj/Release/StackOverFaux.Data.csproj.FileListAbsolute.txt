@@ -1,0 +1,7 @@
+D:\_Projects\StackOverFaux\StackOverFaux.Data\bin\Release\StackOverFaux.Data.dll
+D:\_Projects\StackOverFaux\StackOverFaux.Data\bin\Release\StackOverFaux.Data.pdb
+D:\_Projects\StackOverFaux\StackOverFaux.Data\bin\Release\EntityFramework.dll
+D:\_Projects\StackOverFaux\StackOverFaux.Data\bin\Release\EntityFramework.xml
+D:\_Projects\StackOverFaux\StackOverFaux.Data\obj\Release\ResolveAssemblyReference.cache
+D:\_Projects\StackOverFaux\StackOverFaux.Data\obj\Release\StackOverFaux.Data.dll
+D:\_Projects\StackOverFaux\StackOverFaux.Data\obj\Release\StackOverFaux.Data.pdb
