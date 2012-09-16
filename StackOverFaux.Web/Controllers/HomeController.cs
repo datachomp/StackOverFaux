@@ -40,12 +40,14 @@ namespace StackOverFaux.Web.Controllers
 			//This works great when you don't have huge record sets.
 			using (profiler.Step("Recent Posts Call"))
 			{
-				ViewBag.RecentPosts = ipostRepository.GetRecentPosts();
+				//ViewBag.RecentPosts = ipostRepository.GetRecentPosts();
+                ViewBag.RecentPosts = ipostRepository.GetMostRecentPostsCache();
 			}
 
 			using (profiler.Step("Hottest Posts Call"))
 			{
 				ViewBag.HotPosts = ipostRepository.GetHotPosts();
+                //ViewBag.HotPosts = ipostRepository.GetHotPostsCache();
 			}
 
 			return View();
@@ -140,10 +142,10 @@ namespace StackOverFaux.Web.Controllers
 
 			using (profiler.Step("get Tag Count"))
 			{
-				taggy = itagRepository.GetTagCount(tagname);
+				//taggy = itagRepository.GetTagCount(tagname);
 
 				//uncomment for the Dapper version
-				//taggy = itagRepository.GetdynPostsByTag(tagname);
+				taggy = itagRepository.GetdynPostsByTag(tagname);
 			}
 			
 

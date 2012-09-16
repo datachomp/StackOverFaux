@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Configuration;
 using System.Linq;
+using System.Runtime.Caching;
 using StackOverFaux.Data.Abstract;
 using StackOverFaux.Data.Model;
 
@@ -54,5 +56,57 @@ namespace StackOverFaux.Data.Concrete
 			
 			return recentposts.Take(20).AsQueryable(); ;
 		}
-	}
+
+
+        public IQueryable<FrontPage> GetMostRecentPostsCache()
+        {
+            MemoryCache cache = MemoryCache.Default;
+            string key = "recentposts";
+
+            IQueryable<FrontPage> recentposts;
+
+            if (!cache.Contains(key))
+            {
+
+                recentposts = GetRecentPosts();
+                CacheItemPolicy policy = new CacheItemPolicy();
+                policy.SlidingExpiration = new TimeSpan(0, 0, 0, 45, 0);
+                cache.Set(key, recentposts, policy);
+
+                return recentposts;
+            }
+            else
+            {
+                recentposts = cache.Get(key) as IQueryable<FrontPage>;
+                return recentposts;
+            }
+        }
+
+
+        public IQueryable<FrontPage> GetHotPostsCache()
+        {
+            MemoryCache cache = MemoryCache.Default;
+            string key = "hotposts";
+
+            IQueryable<FrontPage> hotposts;
+
+            if (!cache.Contains(key))
+            {
+                hotposts = GetHotPosts();
+                CacheItemPolicy policy = new CacheItemPolicy();
+                policy.SlidingExpiration = new TimeSpan(0, 0, 0, 45, 0);
+                //cache.Set(key, hotposts, policy);
+                System.Web.HttpRuntime.Cache.Insert(key, hotposts, null, DateTime.Now.AddHours(1), TimeSpan.Zero);
+
+                return hotposts;
+            }
+            else
+            {
+                hotposts = cache.Get(key) as IQueryable<FrontPage>;
+                return hotposts;
+            }
+
+        }
+
+    }
 }

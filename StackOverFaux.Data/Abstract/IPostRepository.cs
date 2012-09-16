@@ -10,5 +10,7 @@ namespace StackOverFaux.Data.Abstract
     {
         IQueryable<FrontPage> GetRecentPosts();
         IQueryable<FrontPage> GetHotPosts();
+        IQueryable<FrontPage> GetMostRecentPostsCache();
+        IQueryable<FrontPage> GetHotPostsCache();
     }
 }

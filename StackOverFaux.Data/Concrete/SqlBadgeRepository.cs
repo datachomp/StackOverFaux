@@ -11,7 +11,6 @@ namespace StackOverFaux.Data.Concrete
 	{
 		SoFConnStr Data = new SoFConnStr();
 
-		//public IEnumerable<Badge> GetAllBadges()
 		public IQueryable<Badge> GetAllBadges()
 		{
 			var badges = from b in Data.Badges

@@ -1,0 +1,14 @@
+C:\Users\rsullivan\Documents\GitHub\StackOverFaux\StackOverFaux.Data\bin\Debug\StackOverFaux.Data.dll
+C:\Users\rsullivan\Documents\GitHub\StackOverFaux\StackOverFaux.Data\bin\Debug\StackOverFaux.Data.pdb
+C:\Users\rsullivan\Documents\GitHub\StackOverFaux\StackOverFaux.Data\bin\Debug\EntityFramework.dll
+C:\Users\rsullivan\Documents\GitHub\StackOverFaux\StackOverFaux.Data\bin\Debug\EntityFramework.xml
+C:\Users\rsullivan\Documents\GitHub\StackOverFaux\StackOverFaux.Data\obj\Debug\StackOverFaux.Data.csprojResolveAssemblyReference.cache
+C:\Users\rsullivan\Documents\GitHub\StackOverFaux\StackOverFaux.Data\obj\Debug\StackOverFaux.Data.dll
+C:\Users\rsullivan\Documents\GitHub\StackOverFaux\StackOverFaux.Data\obj\Debug\StackOverFaux.Data.pdb
+C:\code\StackOverFaux\StackOverFaux.Data\obj\Debug\StackOverFaux.Data.csprojResolveAssemblyReference.cache
+C:\code\StackOverFaux\StackOverFaux.Data\obj\Debug\StackOverFaux.Data.dll
+C:\code\StackOverFaux\StackOverFaux.Data\bin\Debug\StackOverFaux.Data.dll
+C:\code\StackOverFaux\StackOverFaux.Data\bin\Debug\StackOverFaux.Data.pdb
+C:\code\StackOverFaux\StackOverFaux.Data\bin\Debug\EntityFramework.dll
+C:\code\StackOverFaux\StackOverFaux.Data\bin\Debug\EntityFramework.xml
+C:\code\StackOverFaux\StackOverFaux.Data\obj\Debug\StackOverFaux.Data.pdb
